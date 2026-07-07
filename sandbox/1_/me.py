@@ -9,3 +9,14 @@ print(person["age"])
 
 print(f"My name is {person['name']}, I work as a {person['job']}, "
       f"I am {person['age']} years old and I like {person['hobby']}.")
+
+
+
+def describe(data):
+    return (f"My name is {data['name']}, I work as a {data['job']}, "
+            f"I am {data['age']} years old and I like {data['hobby']}.")
+
+print(describe(person))
+
+second = {"name": "Ala", "age": 25, "hobby": "running", "job": "backend"}
+print(describe(second))
