@@ -20,3 +20,9 @@ print(describe(person))
 
 second = {"name": "Ala", "age": 25, "hobby": "running", "job": "backend"}
 print(describe(second))
+
+def describe2(name, age, hobby, job):
+    return (f"My name is {name}, I work as a {job}, "
+            f"I am {age} years old and I like {hobby}.")
+
+print(describe2("Kuba", 30, "music", "designer"))
