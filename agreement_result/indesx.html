@@ -1,0 +1,23 @@
+<h1>UMOWA O KREDYT GOTÓWKOWY</h1>
+<div class="nr">nr {{ umowa.numer }} z dnia {{ umowa.data }}</div>
+
+<p>
+  <strong>Kredytobiorca:</strong> {{ klient.imie }} {{ klient.nazwisko }}, {{
+  klient.adres }}
+</p>
+
+<tr>
+  <th>Kwota kredytu</th>
+  <td>{{ pln(umowa.kwota) }}</td>
+</tr>
+
+{% for r in raty %}
+<tr>
+  <td>{{ r.nr }}</td>
+  <td>{{ r.termin }}</td>
+  <td>{{ pln(r.kwota) }}</td>
+</tr>
+{% endfor %} {% if umowa.kwota > 20000 %}
+<h2>§4. Dodatkowe zapisy</h2>
+<p>Wymagana dodatkowa weryfikacja zdolności kredytowej.</p>
+{% endif %}
